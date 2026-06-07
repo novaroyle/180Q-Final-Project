@@ -1,0 +1,87 @@
+\documentclass[%
+reprint,
+% superscriptaddress,
+% groupedaddress,
+% unsortedaddress,
+% runinaddress,
+% frontmatterverbose, 
+% preprint,
+% preprintnumbers,
+nofootinbib,
+nobibnotes,
+% bibnotes,
+amsmath,amssymb,
+aps, 
+% pra,
+% prb,
+% rmp,
+% prstab,
+% prstper,
+floatfix,
+]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+%\linenumbers\relax % Commence numbering lines
+
+\usepackage{hyperref} \urlstyle{same}
+\usepackage{enumitem} \setlist{nosep} % makes enumerate and itemize blocks better
+\usepackage{cooltooltips}
+\newcommand{\figpart}[1]{\textbf{(#1)}}
+\newcommand{\fix}[2]{\textcolor{red}{#1}\cooltooltip[1 0 0]{Fix this}{}{}{#2}{*}} % usage: \fix{something that might be true}{Verify this is true}
+\usepackage{silence}
+\WarningFilter{revtex4-2}{Repair the float}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{xspace}
+\usepackage{yfonts}
+\usepackage{etoolbox}
+\usepackage{mathtools}
+\setlength{\emergencystretch}{3em} 
+
+\usepackage{siunitx}
+\usepackage[normalem]{ulem}
+\usepackage{booktabs}
+
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usetikzlibrary{optics}
+\usepackage{subcaption}
+\usepackage{placeins}
+\usepackage{minted}
+\usepackage[version=4]{mhchem}
+
+\newcommand{\seteq}[0]{\overset{!}{=}}
+\newcommand{\bra}[1]{\langle#1|} % Bra
+\newcommand{\ket}[1]{|#1\rangle} % Ket
+\newcommand{\braket}[2]{\langle#1|#2\rangle} %Inner Product
+\newcommand{\ketbra}[2]{|#1\rangle\langle#2|} %Outer Product
+
+\begin{document}
+
+\title{180Q Final Project: Quantum Zeno Effect}
+
+\author{Nova Royle\\\textit{University of California, Los Angeles\\Physics 180Q: Quantum Optics Laboratory}}
+\noaffiliation
+
+
+\date{\today}
+
+% \begin{abstract}
+% This is my wonderful abstract.
+% \end{abstract}
+
+\maketitle
+% \thispagestyle{empty} % removes header from this page
+
+\section{Setting up the Apparatus}
+
+
+% \nocite{*}
+\bibliography{180qfinalproject}
+
+\end{document}
