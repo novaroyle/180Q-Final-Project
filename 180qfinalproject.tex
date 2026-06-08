@@ -45,8 +45,9 @@ floatfix,
 
 \usepackage{siunitx}
 \usepackage[normalem]{ulem}
-\usepackage{booktabs}
+\usepackage{braket}
 
+\usepackage{booktabs}
 \usepackage{tikz}
 \usepackage{circuitikz}
 \usetikzlibrary{optics}
@@ -56,10 +57,6 @@ floatfix,
 \usepackage[version=4]{mhchem}
 
 \newcommand{\seteq}[0]{\overset{!}{=}}
-\newcommand{\bra}[1]{\langle#1|} % Bra
-\newcommand{\ket}[1]{|#1\rangle} % Ket
-\newcommand{\braket}[2]{\langle#1|#2\rangle} %Inner Product
-\newcommand{\ketbra}[2]{|#1\rangle\langle#2|} %Outer Product
 
 \begin{document}
 
@@ -71,14 +68,62 @@ floatfix,
 
 \date{\today}
 
-% \begin{abstract}
-% This is my wonderful abstract.
-% \end{abstract}
+\begin{abstract}
+This is my wonderful abstract.
+\end{abstract}
 
 \maketitle
-% \thispagestyle{empty} % removes header from this page
 
-\section{Setting up the Apparatus}
+\section{Introduction}
+
+
+\section{Theory}
+The quantum Zeno effect will be demonstrated here by considering the evolution between polarization states. The basis states in this case are $\ket{H}$ and $\ket{V}$. An arbitrary linear polarization state, then, can be written as 
+\begin{align}
+    \ket{\psi} &= \cos(\theta)\ket{H} + \sin{\theta}\ket{V},
+\end{align}
+where $\theta$ is the angle of polarization. 
+
+We then aim to calculate the magnitude of the state that transmits through the polarizer. Allowing the photon to interact with the polarizer is effectively ``measuring'' the state of the photon, which causes its wavefunction to collapse into $\ket{H}$. Thus, in other words, we want to calculate the magnitude of state projected onto the polarizer axis. Without loss of generality, we will assume the polarizer is set to the $\ket{H}$ axis.\footnote{If the polarizer set at a different angle $\alpha$, this is equivalent to rotating the polarization state by $-\alpha$.} The projection operator onto the $\ket{H}$ state is
+\begin{align}
+    P_H &= \ket{H}\bra{H}.
+\end{align}
+Thus, projecting the arbitrary linear polarization onto $\ket{H}$ gives
+\begin{align}
+    P_H \ket{\psi} &= \ket{H}\bra{H}(\cos(\theta)\ket{H} + \sin{\theta}\ket{V}) \nonumber \\
+    &= \cos(\theta)\ket{H}.
+\end{align}
+The magnitude of this state is
+\begin{align}
+    \braket{\psi|\psi} &= \cos^2(\theta),
+\end{align}
+which gives the probability that a given photon is transmitted. Interpreting this as coincidence count rates, we find
+\begin{align}
+    \Gamma(\theta) &= \Gamma_\text{max}\cos^2(\theta).
+\end{align}
+For classical theories of light as an electromagnetic wave, this relation, with $\Gamma \leftrightarrow I$, is also known as Malus's law.
+
+In this experiment, we wish to verify this relation is true for single photons as it traverses multiple polarizers, each collapsing the photon's wavefunction into its polarization direction. If we have $n$ polarizers set so that the angle $\theta$ between them is consistent, this is equivalent to projecting successively onto different polarization states. Thus, the coincidence count rate for $n$ polarizers with angle difference $\theta$ is
+\begin{align}
+    \Gamma(\theta,n) &= \Gamma_\text{max}\cos^{2n}(\theta).
+\end{align}
+In the case where the total angle difference is \qty{90}{\degree}, the relation between $n$ and $\theta$ is
+\begin{align}
+    \theta = \frac{\qty{90}{\degree}}{n} = \frac{\pi}{2n}.
+\end{align}
+Thus, the final expression for the coincidence count rate for the experiment is expected to be
+\begin{align}
+    \Gamma(n) &= \Gamma_\text{max}\cos^{2n}\left(\frac{\pi}{2n}\right).
+\end{align}
+In determining evidence for the quantum Zeno effect, this model will be compared to the model where the effect does not exist, or a flat line.
+
+\section{Experimental Methods}
+
+
+\section{Conclusion}
+
+
+\section{Summary}
 
 
 % \nocite{*}
