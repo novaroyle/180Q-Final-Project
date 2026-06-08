@@ -10,8 +10,10 @@ reprint,
 nofootinbib,
 nobibnotes,
 % bibnotes,
+nobalancelastpage,
 amsmath,amssymb,
 aps, 
+prl,
 % pra,
 % prb,
 % rmp,
@@ -51,16 +53,17 @@ floatfix,
 \usepackage{tikz}
 \usepackage{circuitikz}
 \usetikzlibrary{optics}
-\usepackage{subcaption}
+\usepackage[caption=false]{subfig}
 \usepackage{placeins}
 \usepackage{minted}
 \usepackage[version=4]{mhchem}
 
 \newcommand{\seteq}[0]{\overset{!}{=}}
+\renewcommand{\section}[1]{\textit{#1}---\ignorespaces}
 
 \begin{document}
 
-\title{180Q Final Project: Quantum Zeno Effect}
+\title{Physics 180Q Final Project: Demonstration of the Quantum Zeno Effect}
 
 \author{Nova Royle\\\textit{University of California, Los Angeles\\Physics 180Q: Quantum Optics Laboratory}}
 \noaffiliation
@@ -97,13 +100,17 @@ The magnitude of this state is
 \begin{align}
     \braket{\psi|\psi} &= \cos^2(\theta),
 \end{align}
-which gives the probability that a given photon is transmitted. Interpreting this as coincidence count rates, we find
+which gives the probability that a given photon is transmitted. If there is a stream of photons entering a detector, 
 \begin{align}
-    \Gamma(\theta) &= \Gamma_\text{max}\cos^2(\theta).
+    \braket{\psi|\psi} \propto \Gamma,
 \end{align}
-For classical theories of light as an electromagnetic wave, this relation, with $\Gamma \leftrightarrow I$, is also known as Malus's law.
+where $\Gamma$ is the coincidence count rate. Thus, the relation between the input and output count rate is given by
+\begin{align}
+    \Gamma(\theta) &= \Gamma_\text{max}\cos^2(\theta). \label{eq:onepol}
+\end{align}
+For classical theories of light as an electromagnetic wave, this relation considering $\Gamma \leftrightarrow I$ is also known as Malus's law.
 
-In this experiment, we wish to verify this relation is true for single photons as it traverses multiple polarizers, each collapsing the photon's wavefunction into its polarization direction. If we have $n$ polarizers set so that the angle $\theta$ between them is consistent, this is equivalent to projecting successively onto different polarization states. Thus, the coincidence count rate for $n$ polarizers with angle difference $\theta$ is
+In this experiment, we wish to verify this relation is true for single photons as it traverses multiple polarizers, each collapsing the photon's wavefunction into its polarization direction. If there are $n$ polarizers set so that the angle $\theta$ between them is consistent, this is equivalent to projecting successively onto different polarization states. Thus, the coincidence count rate for $n$ polarizers with angle difference $\theta$ is
 \begin{align}
     \Gamma(\theta,n) &= \Gamma_\text{max}\cos^{2n}(\theta).
 \end{align}
@@ -113,9 +120,14 @@ In the case where the total angle difference is \qty{90}{\degree}, the relation 
 \end{align}
 Thus, the final expression for the coincidence count rate for the experiment is expected to be
 \begin{align}
-    \Gamma(n) &= \Gamma_\text{max}\cos^{2n}\left(\frac{\pi}{2n}\right).
+    \Gamma(n) &= \Gamma_\text{max}\cos^{2n}\left(\frac{\pi}{2n}\right),
 \end{align}
-In determining evidence for the quantum Zeno effect, this model will be compared to the model where the effect does not exist, or a flat line.
+or equivalently,
+\begin{align}
+    \Gamma(\theta) &= \Gamma_\text{max}\cos^{\frac{\pi}{\theta}}(\theta).
+\end{align}
+
+It is critical to note that for increasing $n$, the rate of coincident photons also increases. Interestingly, for $n\rightarrow\infty$, $\Gamma\rightarrow\Gamma_\text{max}$, meaning that all photons pass through despite the initial and final polarization angles being \qty{90}{\degree} apart. Thus, the quantum Zeno effect predicts that as more polarizers are added, the more frequent ``observations'' prevent the quantum state from diverging from its observed state. In determining evidence for the quantum Zeno effect, this model will be compared to the model where the effect does not exist, or a flat line.
 
 \section{Experimental Methods}
 
