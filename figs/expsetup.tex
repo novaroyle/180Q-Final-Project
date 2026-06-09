@@ -13,7 +13,7 @@
     beam/.style={red, thick, decoration={markings, mark=at position 0.5 with {\arrow{Stealth}}}, postaction={decorate}},
     laser/.style={draw, fill=blue!20, minimum width=2cm, minimum height=1cm},
     coupler/.style={draw, fill=violet!80, minimum width=0.5cm, minimum height=0.8cm},
-    fiber/.style={thick, violet, decoration={snake, amplitude=0.4mm, segment length=8mm},decorate},
+    fiber/.style={thick, violet},
     }
 
     \begin{tikzpicture} 
@@ -64,7 +64,7 @@
     \node[draw, fill=gray!20, circle, minimum size=0.2cm] at (4,-3) {};
     \node at (3.5,-2.5) {Fiber inputs};
 
-    \draw[fiber] (coupler0.south) to[bend left=30] (3,-3);
+    \draw[fiber] (coupler0.south) to[bend left=60] (3,-3);
     \draw[fiber] (coupler1.south) to[bend left=60] (4,-3);
 
     \end{tikzpicture}
