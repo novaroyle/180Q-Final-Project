@@ -87,7 +87,7 @@ The quantum Zeno effect will be demonstrated here by considering the evolution b
 \end{align}
 where $\theta$ is the angle of polarization. 
 
-We then aim to calculate the magnitude of the state that transmits through the polarizer. Allowing the photon to interact with the polarizer is effectively ``measuring'' the state of the photon, which causes its wavefunction to collapse into $\ket{H}$. Thus, in other words, we want to calculate the magnitude of state projected onto the polarizer axis. Without loss of generality, we will assume the polarizer is set to the $\ket{H}$ axis.\footnote{If the polarizer set at a different angle $\alpha$, this is equivalent to rotating the polarization state by $-\alpha$.} The projection operator onto the $\ket{H}$ state is
+We then aim to calculate the magnitude of the state that transmits through the polarizer. Allowing the photon to interact with the polarizer is effectively ``measuring'' the state of the photon, which causes its wavefunction to collapse into $\ket{H}$. Thus, in other words, we want to calculate the magnitude of state projected onto the polarizer axis. Without loss of generality, we will assume the polarizer is set to the $\ket{H}$ axis.\footnote{If the polarizer set at a different angle $\alpha$, this is equivalent to rotating the polarization state by $-\alpha$.} The projection operator \cite{griffithsIntroductionQuantumMechanics2018} onto the $\ket{H}$ state is
 \begin{align}
     P_H &= \ket{H}\bra{H}.
 \end{align}
@@ -108,7 +108,7 @@ where $\Gamma$ is the coincidence count rate. Thus, the relation between the inp
 \begin{align}
     \Gamma(\theta) &= \Gamma_\text{max}\cos^2(\theta). \label{eq:onepol}
 \end{align}
-For classical theories of light as an electromagnetic wave, this relation considering $\Gamma \leftrightarrow I$ is also known as Malus's law.
+For classical theories of light as an electromagnetic wave, this relation considering $\Gamma \leftrightarrow I$ is also known as Malus's law \cite{hechtOptics2017}.
 
 In this experiment, we wish to verify this relation is true for single photons as it traverses multiple polarizers, each collapsing the photon's wavefunction into its polarization direction. If there are $n$ polarizers set so that the angle $\theta$ between them is consistent, this is equivalent to projecting successively onto different polarization states. Thus, the coincidence count rate for $n$ polarizers with angle difference $\theta$ is
 \begin{align}
@@ -127,10 +127,13 @@ or equivalently,
     \Gamma(\theta) &= \Gamma_\text{max}\cos^{\frac{\pi}{\theta}}(\theta).
 \end{align}
 
-It is critical to note that for increasing $n$, the rate of coincident photons also increases. Interestingly, for $n\rightarrow\infty$, $\Gamma\rightarrow\Gamma_\text{max}$, meaning that all photons pass through despite the initial and final polarization angles being \qty{90}{\degree} apart. Thus, the quantum Zeno effect predicts that as more polarizers are added, the more frequent ``observations'' prevent the quantum state from diverging from its observed state (the direction of the polarizers). In determining evidence for the quantum Zeno effect, this model will be compared to the model where the effect does not exist, or a flat line.
+It is critical to note that for increasing $n$, the rate of coincident photons also increases. Interestingly, for $n\rightarrow\infty$, $\Gamma\rightarrow\Gamma_\text{max}$, meaning that all photons pass through despite the initial and final polarization angles being \qty{90}{\degree} apart. Thus, the quantum Zeno effect predicts that as more polarizers are added, more of the photons will transmit through, as the more frequent observations force wavefunction collapse in the polarizer bases.
 
 \section{Experimental Methods}
 \include{figs/expsetup}
+
+\section{Results}
+
 
 \section{Conclusion}
 

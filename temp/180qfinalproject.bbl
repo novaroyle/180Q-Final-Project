@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{0}%
+\begin{thebibliography}{2}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -49,4 +49,10 @@
 \providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
 \let\auto@bib@innerbib\@empty
 %</preamble>
+\bibitem [{\citenamefont {Griffiths}\ and\ \citenamefont {Schroeter}(2018)}]{griffithsIntroductionQuantumMechanics2018}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~J.}\ \bibnamefont {Griffiths}}\ and\ \bibinfo {author} {\bibfnamefont {D.~F.}\ \bibnamefont {Schroeter}},\ }\href {https://doi.org/10.1017/9781316995433} {\emph {\bibinfo {title} {Introduction to Quantum Mechanics}}},\ \bibinfo {edition} {third edition}\ ed.\ (\bibinfo  {publisher} {Cambridge University Press},\ \bibinfo {address} {Cambridge},\ \bibinfo {year} {2018})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hecht}(2017)}]{hechtOptics2017}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Hecht}},\ }\href@noop {} {\emph {\bibinfo {title} {Optics}}},\ \bibinfo {edition} {5th}\ ed.\ (\bibinfo  {publisher} {Pearson Education, Inc},\ \bibinfo {address} {Boston},\ \bibinfo {year} {2017})\BibitemShut {NoStop}%
 \end{thebibliography}%
