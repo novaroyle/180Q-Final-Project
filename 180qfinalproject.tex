@@ -131,7 +131,7 @@ or equivalently,
 It is critical to note that for increasing $n$, the rate of coincident photons also increases. Interestingly, for $n\rightarrow\infty$, $\Gamma\rightarrow\Gamma_\text{max}$, meaning that all photons pass through despite the initial and final polarization angles being \qty{90}{\degree} apart. Thus, the quantum Zeno effect predicts that as more polarizers are added, more of the photons will transmit through, as the more frequent observations force wavefunction collapse in the polarizer bases.
 
 \section{Experimental Methods}
-To ensure measurements are characteristic of the quantum Zeno effect, coincident photons must be created and measured. The process of spontaneous parametric down-conversion (SPDC) was used to generate two photons with wavelength \qty{810}{\nano\meter} from a single pump photon with wavelength \qty{405}{\nano\meter}. We use beta-barium borate, which causes type I SPDC which ensures the down-converted photons are in the same polarization state. Thus, these two output photons (sent to arm 0 and arm 1) are present in the state
+To ensure measurements are characteristic of the quantum Zeno effect, coincident photons must be created and measured. The process of spontaneous parametric down-conversion (SPDC) was used to generate two photons with wavelength \qty{810}{\nano\meter} from a single pump photon with wavelength \qty{405}{\nano\meter} \cite{klyskoPhotonsNonlinearOptics1988,qutoolsgmbhQutoolsQuEDDatasheet2022}. We use beta-barium borate, which causes type I SPDC which ensures the down-converted photons are in the same polarization state \cite{qutoolsgmbhQuEDManual2021}. Thus, these two output photons (sent to arm 0 and arm 1) are present in the state
 \begin{align}
     \ket{\psi} &= \ket{H}_0 \ket{H}_1.
 \end{align} 
@@ -159,7 +159,7 @@ where $\tau$ is the coincidence window (here, \qty{40}{\nano\second}) and $\Gamm
 
 These data were fit to a modification of Equation \ref{eq:ratevsn}, 
 \begin{align}
-    \Gamma(n) &= A \cos^{2n}\left(\frac{\pi}{2n}\right) + C,
+    \Gamma(n) &= A \cos^{2n}\left(\frac{\pi}{2n}\right) + C\label{eq:fitfunc},
 \end{align}
 with $A$ and $C$ free fit parameters. The model showed a fair fit, with $R^2 = 0.9952$ and reduced $\chi^2 = 4.2447$. However, physical size constraints limited the number of data points possible, which increased the uncertainty in the fit. 
 
