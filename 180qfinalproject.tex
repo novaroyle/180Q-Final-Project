@@ -117,7 +117,7 @@ In this experiment, we wish to verify this relation is true for single photons a
 \end{align}
 In the case where the total angle difference is \qty{90}{\degree}, the relation between $n$ and $\theta$ is
 \begin{align}
-    \theta = \frac{\qty{90}{\degree}}{n} = \frac{\pi}{2n}.
+    \theta = \frac{\qty{90}{\degree}}{n} = \frac{\pi}{2n}\label{eq:angle}.
 \end{align}
 This leads to expected expression for the coincidence count rate for the experiment \cite{kwiatExperimentalRealizationInteractionfree1995},
 \begin{align}
@@ -131,27 +131,41 @@ or equivalently,
 It is critical to note that for increasing $n$, the rate of coincident photons also increases. Interestingly, for $n\rightarrow\infty$, $\Gamma\rightarrow\Gamma_\text{max}$, meaning that all photons pass through despite the initial and final polarization angles being \qty{90}{\degree} apart. Thus, the quantum Zeno effect predicts that as more polarizers are added, more of the photons will transmit through, as the more frequent observations force wavefunction collapse in the polarizer bases.
 
 \section{Experimental Methods}
-\include{figs/expsetup}
+To ensure measurements are characteristic of the quantum Zeno effect, coincident photons must be created and measured. The process of spontaneous parametric down-conversion (SPDC) was used to generate two photons with wavelength \qty{810}{\nano\meter} from a single pump photon with wavelength \qty{405}{\nano\meter}. We use beta-barium borate, which causes type I SPDC which ensures the down-converted photons are in the same polarization state. Thus, these two output photons (sent to arm 0 and arm 1) are present in the state
+\begin{align}
+    \ket{\psi} &= \ket{H}_0 \ket{H}_1.
+\end{align} 
+The SPDC efficiency is $\approx10^{-11}$, so few photons are down-converted. The rest are blocked by a filter and do not continue through the optical setup.
+
+Using coupling mirrors, the photons are redirected towards fiber couplers attached to two inputs on a photon counter, shown in Fig. \ref{fig:expsetup}. In arm 0, between the mirror and fiber coupler are four identical polarizers on rotation mounts, which are arbitrarily adjustable and nominally set to the vertical direction parallel to $\ket{V}$. Ensuring the number of physical polarizers present is constant helps to remove the confounding variable of a nonconstant transmission coefficient. The photons in arm 1 are simply coupled into an optical fiber directly as a control. 
+
+The photon counter is able to detect the single count rates and coincidence count rates, which is used in order to reduce the effects of background light reaching the coupler. Simultaneous clicks in arm 0 and arm 1 within the coincidence window are recorded as a coincident photon.
+
+Experiments were performed with the quED Entanglement Demonstrator produced by qutools GmbH\cite{qutoolsgmbhQutoolsQuEDDatasheet2022}. The photon counter is the qutools GmbH quCR Control and Read-out Unit \cite{qutoolsgmbhQuCRManualVersion2019}, provided with the quED apparatus. 
+
+To begin the experiment, the laser diode was set to its operating frequency of \qty{38}{\milli\ampere}. Beam alignment was performed to optimize single count rates and coincident count rates by adjusting the coupling mirror and fiber collimator. Once the alignment of the laser was optimized, the quantum Zeno effect experiment could begin. To increase the number of relevant polarizers, the first $n$ polarizers are set at angles according to Equation \ref{eq:angle}. The count rates were then tabulated and analyzed.
+\input{figs/expsetup}
 
 \section{Results}
-This experiment was performed for up to 4 polarizers, set at equal angles from \qty{0}{\degree} to \qty{90}{\degree}. The coincidence count rate was recorded for each configuration, with the baseline dark counts subtracted (Fig. \ref{fig:countsvsn}). These data were fit to a modification Equation \ref{eq:ratevsn}, 
-\begin{align}
-    \Gamma(n) &= A \cos^{2n}\left(\frac{\pi}{2n}\right) + C,
-\end{align}
-with $A$ and $C$ free fit parameters. The model showed a fair fit, with $R^2 = 0.9952$ and reduced $\chi^2 = 4.2447$. However, physical size constraints limited the number of data points possible. 
-
-Error analysis was performed assuming a Poisson distribution for the number of counts,
+This experiment was performed for up to 4 polarizers, set at equal angles from \qty{0}{\degree} to \qty{90}{\degree}. Thus, $\Delta \theta$ ranged from \qty{90}{\degree} to \qty{22.5}{\degree}. Error analysis was performed assuming a Poisson distribution for the number of counts,
 \begin{align}
     \sigma &= \sqrt{N},
 \end{align}
-and an error of \qty{0.5}{\degree} in the angles. The accidental count rate was also corrected for using the relation,
+and an error of \qty{0.5}{\degree} in the angles, which were marked in \qty{1}{\degree} increments on the rotation mount. The accidental count rate was also corrected for using the relation,
 \begin{align}
-    asdasd
+    \Gamma_\text{accidental} &\approx \tau \Gamma_0 \Gamma_1,
 \end{align}
+where $\tau$ is the coincidence window (here, \qty{40}{\nano\second}) and $\Gamma_0$ and $\Gamma_1$ are the single count rate in arm 0 and 1, respectively. This accidental count rate, along with its calculated error through Poisson statistics, was subtracted for each datum. The coincidence count rate as it relates to the number of polarizers is shown in Fig. \ref{fig:countsvsn}.
 
-The data fit to a linear function with free slope and intercept. The fitted slope is \qty{224(39)}{counts/\second/polarizer}. The quantum Zeno effect-free case predicts a zero slope in this case, as increasing $n$ does not increase the number of transmitted photons. However, we see the violation of the null hypothesis by \qty{5.80}\sigma, a strong violation. Thus, we observe evidence of the quantum Zeno effect.
+These data were fit to a modification of Equation \ref{eq:ratevsn}, 
+\begin{align}
+    \Gamma(n) &= A \cos^{2n}\left(\frac{\pi}{2n}\right) + C,
+\end{align}
+with $A$ and $C$ free fit parameters. The model showed a fair fit, with $R^2 = 0.9952$ and reduced $\chi^2 = 4.2447$. However, physical size constraints limited the number of data points possible, which increased the uncertainty in the fit. 
 
-\include{figs/countsvsn}
+With a single polarizer, the angle between them was \qty{90}{\degree} and shows no transmission, as expected. As the number of polarizers increases and the angle difference decreases, we see a monotonically increasing trend characteristic of the expectations of the quantum Zeno effect. To show this, the data was then fit to a linear function with free slope and intercept. The fitted slope is \qty{224(39)}{\second^{-1}}. The quantum Zeno effect-free case predicts a zero slope in this case, as increasing $n$ does not increase the number of transmitted photons. However, we see the violation of the null hypothesis by \qty{5.80}\sigma, a strong violation. Thus, we observe evidence of the quantum Zeno effect.
+
+\input{figs/countsvsn}
 
 \section{Conclusion}
 

@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{3}%
+\begin{thebibliography}{5}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -58,4 +58,10 @@
 \bibitem [{\citenamefont {Kwiat}\ \emph {et~al.}(1995)\citenamefont {Kwiat}, \citenamefont {Weinfurter}, \citenamefont {Herzog}, \citenamefont {Zeilinger},\ and\ \citenamefont {Kasevich}}]{kwiatExperimentalRealizationInteractionfree1995}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Kwiat}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Weinfurter}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Herzog}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Zeilinger}},\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Kasevich}},\ }\bibfield  {title} {\bibinfo {title} {Experimental {{Realization}} of {{Interaction-free Measurements}}},\ }\href {https://doi.org/10.1111/j.1749-6632.1995.tb38981.x} {\bibfield  {journal} {\bibinfo  {journal} {Annals of the New York Academy of Sciences}\ }\textbf {\bibinfo {volume} {755}},\ \bibinfo {pages} {383} (\bibinfo {year} {1995})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {{qutools GmbH}}(2022)}]{qutoolsgmbhQutoolsQuEDDatasheet2022}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {{qutools GmbH}}},\ }\href@noop {} {\bibinfo {title} {Qutools {{quED Datasheet}}}} (\bibinfo {year} {2022})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {{qutools GmbH}}(2019)}]{qutoolsgmbhQuCRManualVersion2019}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {{qutools GmbH}}},\ }\href@noop {} {\bibinfo {title} {{{quCR Manual Version}} 3.2}} (\bibinfo {year} {2019})\BibitemShut {NoStop}%
 \end{thebibliography}%
