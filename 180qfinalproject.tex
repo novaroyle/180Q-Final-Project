@@ -1,6 +1,6 @@
 \documentclass[%
 reprint,
-% superscriptaddress,
+superscriptaddress,
 % groupedaddress,
 % unsortedaddress,
 % runinaddress,
@@ -64,10 +64,10 @@ floatfix,
 
 \begin{document}
 
-\title{Physics 180Q Final Project: Demonstration of the Quantum Zeno Effect}
+\title{Experimental Demonstration of the Quantum Zeno Effect}
 
-\author{Nova Royle\\\textit{University of California, Los Angeles\\Physics 180Q: Quantum Optics Laboratory}}
-\noaffiliation
+\author{Nova Royle}
+\affiliation{Department of Physics and Astronomy, University of California, Los Angeles, CA 90095, U.S.A.}
 
 
 \date{\today}
@@ -79,16 +79,16 @@ This is my wonderful abstract.
 \maketitle
 
 \section{Introduction}
-
+The quantum Zeno effect was first theoretically predicted by Misra and Sudarshan in 1977 while investigating probabilities for state decays \cite{misraZenosParadoxQuantum1977}. The effect predicts that repeated measurements of a quantum state cause repeated wavefunction collapse into the measured state, so it cannot evolve from that state.\footnote{One might refer to the effect as ``a watched state never boils.''} The effect most often applies to time-dependent state evolution, but the principle can be expanded into time-independent regimes \cite{peresZenoParadoxQuantum1980}. One such regime is the case of optical polarization. The standard 
 
 \section{Theory}
-The quantum Zeno effect will be demonstrated here by considering the evolution between polarization states. The basis states in this case are $\ket{H}$ and $\ket{V}$. An arbitrary linear polarization state, then, can be written as 
+The Zeno effect will be demonstrated here by considering the evolution between polarization states. The basis states in this case are $\ket{H}$ and $\ket{V}$. An arbitrary linear polarization state, then, can be written as 
 \begin{align}
     \ket{\psi} &= \cos(\theta)\ket{H} + \sin{\theta}\ket{V},
 \end{align}
 where $\theta$ is the angle of polarization. 
 
-We then aim to calculate the magnitude of the state that transmits through the polarizer. Allowing the photon to interact with the polarizer is effectively ``measuring'' the state of the photon, which causes its wavefunction to collapse into $\ket{H}$. Thus, in other words, we want to calculate the magnitude of state projected onto the polarizer axis. Without loss of generality, we will assume the polarizer is set to the $\ket{H}$ axis.\footnote{If the polarizer set at a different angle $\alpha$, this is equivalent to rotating the polarization state by $-\alpha$.} The projection operator \cite{griffithsIntroductionQuantumMechanics2018} onto the $\ket{H}$ state is
+We then aim to calculate the magnitude of the state that transmits through the polarizer. Allowing the photon to interact with the polarizer is effectively ``measuring'' the state of the photon, which causes its wavefunction to collapse into $\ket{H}$. Thus, in other words, we want to calculate the magnitude of state projected onto the polarizer axis. Without loss of generality, we will assume the polarizer is set to the $\ket{H}$ axis. After all, if the polarizer set at a different angle $\alpha$, this is equivalent to simply rotating the polarization state by $-\alpha$. The projection operator \cite{griffithsIntroductionQuantumMechanics2018} onto the $\ket{H}$ state is
 \begin{align}
     P_H &= \ket{H}\bra{H}.
 \end{align}
@@ -131,7 +131,7 @@ or equivalently,
 It is critical to note that for increasing $n$, the rate of coincident photons also increases. Interestingly, for $n\rightarrow\infty$, $\Gamma\rightarrow\Gamma_\text{max}$, meaning that all photons pass through despite the initial and final polarization angles being \qty{90}{\degree} apart. Thus, the quantum Zeno effect predicts that as more polarizers are added, more of the photons will transmit through, as the more frequent observations force wavefunction collapse in the polarizer bases.
 
 \section{Experimental Methods}
-To ensure measurements are characteristic of the quantum Zeno effect, coincident photons must be created and measured. The process of spontaneous parametric down-conversion (SPDC) was used to generate two photons with wavelength \qty{810}{\nano\meter} from a single pump photon with wavelength \qty{405}{\nano\meter} \cite{klyskoPhotonsNonlinearOptics1988,qutoolsgmbhQutoolsQuEDDatasheet2022}. We use beta-barium borate, which causes type I SPDC which ensures the down-converted photons are in the same polarization state \cite{qutoolsgmbhQuEDManual2021}. Thus, these two output photons (sent to arm 0 and arm 1) are present in the state
+To ensure measurements are characteristic of the quantum Zeno effect, coincident photons must be created and measured. The process of spontaneous parametric down-conversion (SPDC) was used to generate two photons with wavelength \qty{810}{\nano\meter} from a single pump photon with wavelength \qty{405}{\nano\meter} \cite{klyskoPhotonsNonlinearOptics1988,qutoolsgmbhQutoolsQuEDDatasheet2022,hausWavesFieldsOptoelectronics1984}. We use beta-barium borate, which causes type I SPDC which ensures the down-converted photons are in the same polarization state \cite{qutoolsgmbhQuEDManual2021}. Thus, these two output photons (sent to arm 0 and arm 1) are present in the state
 \begin{align}
     \ket{\psi} &= \ket{H}_0 \ket{H}_1.
 \end{align} 
@@ -141,9 +141,9 @@ Using coupling mirrors, the photons are redirected towards fiber couplers attach
 
 The photon counter is able to detect the single count rates and coincidence count rates, which is used in order to reduce the effects of background light reaching the coupler. Simultaneous clicks in arm 0 and arm 1 within the coincidence window are recorded as a coincident photon.
 
-Experiments were performed with the quED Entanglement Demonstrator produced by qutools GmbH\cite{qutoolsgmbhQutoolsQuEDDatasheet2022}. The photon counter is the qutools GmbH quCR Control and Read-out Unit \cite{qutoolsgmbhQuCRManualVersion2019}, provided with the quED apparatus. 
+Experiments were performed with the quED Entanglement Demonstrator produced by qutools GmbH \cite{qutoolsgmbhQutoolsQuEDDatasheet2022}. The photon counter is the qutools GmbH quCR Control and Read-out Unit \cite{qutoolsgmbhQuCRManualVersion2019}, provided with the quED apparatus. 
 
-To begin the experiment, the laser diode was set to its operating frequency of \qty{38}{\milli\ampere}. Beam alignment was performed to optimize single count rates and coincident count rates by adjusting the coupling mirror and fiber collimator. Once the alignment of the laser was optimized, the quantum Zeno effect experiment could begin. To increase the number of relevant polarizers, the first $n$ polarizers are set at angles according to Equation \ref{eq:angle}. The count rates were then tabulated and analyzed.
+To begin the experiment, the laser diode was set to its operating current of \qty{38}{\milli\ampere}. Beam alignment was performed to optimize single count rates and coincident count rates by adjusting the coupling mirror and fiber collimator. Once the alignment of the laser was optimized, the quantum Zeno effect experiment could begin. To increase the number of relevant polarizers, the first $n$ polarizers are set at angles according to Equation \ref{eq:angle}. The count rates were then tabulated and analyzed.
 \input{figs/expsetup}
 
 \section{Results}
@@ -155,20 +155,22 @@ and an error of \qty{0.5}{\degree} in the angles, which were marked in \qty{1}{\
 \begin{align}
     \Gamma_\text{accidental} &\approx \tau \Gamma_0 \Gamma_1,
 \end{align}
-where $\tau$ is the coincidence window (here, \qty{40}{\nano\second}) and $\Gamma_0$ and $\Gamma_1$ are the single count rate in arm 0 and 1, respectively. This accidental count rate, along with its calculated error through Poisson statistics, was subtracted for each datum. The coincidence count rate as it relates to the number of polarizers is shown in Fig. \ref{fig:countsvsn}.
+where $\tau$ is the coincidence window (here, \qty{40}{\nano\second} \cite{qutoolsgmbhQutoolsQuEDDatasheet2022}) and $\Gamma_0$ and $\Gamma_1$ are the single count rates in arm 0 and 1, respectively. This accidental count rate, along with its calculated error through Poisson statistics, was subtracted for each datum. The coincidence count rate as it relates to the number of polarizers is shown in Fig. \ref{fig:countsvsn}.
 
 These data were fit to a modification of Equation \ref{eq:ratevsn}, 
 \begin{align}
     \Gamma(n) &= A \cos^{2n}\left(\frac{\pi}{2n}\right) + C\label{eq:fitfunc},
 \end{align}
-with $A$ and $C$ free fit parameters. The model showed a fair fit, with $R^2 = 0.9952$ and reduced $\chi^2 = 4.2447$. However, physical size constraints limited the number of data points possible, which increased the uncertainty in the fit. 
+with $A$ and $C$ free fit parameters. The model showed a fair fit to $A=\qty{1250(34)}{counts/\second}$ and $C=\qty{8(4)}{counts/\second}$, with $R^2 = 0.9952$ and reduced $\chi^2 = 4.2447$. For statistical comparison, a linear fit was also performed. The fitted slope was found to be \qty{224(39)}{\second^{-1}}.
 
-With a single polarizer, the angle between them was \qty{90}{\degree} and shows no transmission, as expected. As the number of polarizers increases and the angle difference decreases, we see a monotonically increasing trend characteristic of the expectations of the quantum Zeno effect. To show this, the data was then fit to a linear function with free slope and intercept. The fitted slope is \qty{224(39)}{\second^{-1}}. The quantum Zeno effect-free case predicts a zero slope in this case, as increasing $n$ does not increase the number of transmitted photons. However, we see the violation of the null hypothesis by \qty{5.80}\sigma, a strong violation. Thus, we observe evidence of the quantum Zeno effect.
+For the sake of comparison, the coincidence count rate was also measured for all polarizers set parallel to $\ket{H}$ to simulate the $n\rightarrow\infty$ case. This count rate was found to be \qty{1159(11)}{counts/\second} in this case. Similarly, the count rate for all polarizers set parallel to $\ket{V}$ was measured to be \qty{14.1(1.2)}{counts/\second}. This gives a measurement of the number of dark counts and counts due to nonideal polarizer transmission.
 
 \input{figs/countsvsn}
 
 \section{Conclusion}
+With a single polarizer, the angle between them was \qty{90}{\degree} and shows no transmission, as expected. As the number of polarizers increases and the angle difference decreases, we see a monotonically increasing trend characteristic of the expectations of the quantum Zeno effect. The quantum Zeno effect-free case predicts a zero slope in case of a linear fit, as increasing $n$ would not increase the number of transmitted photons. Statistical analysis of the slope compared to the null reveals a violation of the null hypothesis by $\qty{5.80}\sigma$. Thus, we observe evidence of the quantum Zeno effect.
 
+The fit to the Malus's law prediction is fairly strong, with low statistical confidence arising due to the relatively low number of data points. Also, the limit of the fit function (Equation \ref{eq:fitfunc}) for $n\rightarrow\infty$ is given by $\Gamma = A + C$, which in this case is \qty{1173(77)}{counts/\second}. Comparing to the measured estimated value $n\rightarrow\infty$ value of \qty{1159(11)}{counts/\second}, we see excellent agreement to $\qty{0.18}\sigma$. The parameter $C$ is approximately equal to the number of dark counts, which agrees to $\qty{1.08}\sigma$. Thus, the number of dark counts is fairly underestimated by the fit model.
 
 \section{Summary}
 

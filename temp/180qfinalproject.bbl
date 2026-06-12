@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{7}%
+\begin{thebibliography}{10}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -49,6 +49,12 @@
 \providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
 \let\auto@bib@innerbib\@empty
 %</preamble>
+\bibitem [{\citenamefont {Misra}\ and\ \citenamefont {Sudarshan}(1977)}]{misraZenosParadoxQuantum1977}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Misra}}\ and\ \bibinfo {author} {\bibfnamefont {E.~C.~G.}\ \bibnamefont {Sudarshan}},\ }\bibfield  {title} {\bibinfo {title} {The {{Zeno}}'s paradox in quantum theory},\ }\href {https://doi.org/10.1063/1.523304} {\bibfield  {journal} {\bibinfo  {journal} {J. Math. Phys.}\ }\textbf {\bibinfo {volume} {18}},\ \bibinfo {pages} {756} (\bibinfo {year} {1977})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Peres}(1980)}]{peresZenoParadoxQuantum1980}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Peres}},\ }\bibfield  {title} {\bibinfo {title} {Zeno paradox in quantum theory},\ }\href {https://doi.org/10.1119/1.12204} {\bibfield  {journal} {\bibinfo  {journal} {American Journal of Physics}\ }\textbf {\bibinfo {volume} {48}},\ \bibinfo {pages} {931} (\bibinfo {year} {1980})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Griffiths}\ and\ \citenamefont {Schroeter}(2018)}]{griffithsIntroductionQuantumMechanics2018}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~J.}\ \bibnamefont {Griffiths}}\ and\ \bibinfo {author} {\bibfnamefont {D.~F.}\ \bibnamefont {Schroeter}},\ }\href {https://doi.org/10.1017/9781316995433} {\emph {\bibinfo {title} {Introduction to Quantum Mechanics}}},\ \bibinfo {edition} {3rd}\ ed.\ (\bibinfo  {publisher} {Cambridge University Press},\ \bibinfo {address} {Cambridge},\ \bibinfo {year} {2018})\BibitemShut {NoStop}%
@@ -64,6 +70,9 @@
 \bibitem [{\citenamefont {{qutools GmbH}}(2022)}]{qutoolsgmbhQutoolsQuEDDatasheet2022}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibnamefont {{qutools GmbH}}},\ }\href@noop {} {\bibinfo {title} {{{quED Datasheet}}}} (\bibinfo {year} {2022})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Haus}(1984)}]{hausWavesFieldsOptoelectronics1984}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.~A.}\ \bibnamefont {Haus}},\ }\href@noop {} {\emph {\bibinfo {title} {Waves and Fields in Optoelectronics}}},\ Prentice-{{Hall}} Series in Solid State Physical Electronics\ (\bibinfo  {publisher} {Prentice-Hall},\ \bibinfo {address} {Englewood Cliffs, NJ},\ \bibinfo {year} {1984})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {{qutools GmbH}}(2021)}]{qutoolsgmbhQuEDManual2021}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibnamefont {{qutools GmbH}}},\ }\href@noop {} {\bibinfo {title} {{{quED Manual}}}} (\bibinfo {year} {2021})\BibitemShut {NoStop}%
