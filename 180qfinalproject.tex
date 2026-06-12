@@ -53,6 +53,7 @@ floatfix,
 \usepackage{tikz}
 \usepackage{circuitikz}
 \usetikzlibrary{optics}
+\usepackage{adjustbox}
 \usepackage[caption=false]{subfig}
 \usepackage{placeins}
 \usepackage{minted}
@@ -118,9 +119,9 @@ In the case where the total angle difference is \qty{90}{\degree}, the relation 
 \begin{align}
     \theta = \frac{\qty{90}{\degree}}{n} = \frac{\pi}{2n}.
 \end{align}
-Thus, the final expression for the coincidence count rate for the experiment is expected to be
+This leads to expected expression for the coincidence count rate for the experiment \cite{kwiatExperimentalRealizationInteractionfree1995},
 \begin{align}
-    \Gamma(n) &= \Gamma_\text{max}\cos^{2n}\left(\frac{\pi}{2n}\right),
+    \Gamma(n) &= \Gamma_\text{max}\cos^{2n}\left(\frac{\pi}{2n}\right)\label{eq:ratevsn},
 \end{align}
 or equivalently,
 \begin{align}
@@ -133,7 +134,24 @@ It is critical to note that for increasing $n$, the rate of coincident photons a
 \include{figs/expsetup}
 
 \section{Results}
+This experiment was performed for up to 4 polarizers, set at equal angles from \qty{0}{\degree} to \qty{90}{\degree}. The coincidence count rate was recorded for each configuration, with the baseline dark counts subtracted (Fig. \ref{fig:countsvsn}). These data were fit to a modification Equation \ref{eq:ratevsn}, 
+\begin{align}
+    \Gamma(n) &= A \cos^{2n}\left(\frac{\pi}{2n}\right) + C,
+\end{align}
+with $A$ and $C$ free fit parameters. The model showed a fair fit, with $R^2 = 0.9952$ and reduced $\chi^2 = 4.2447$. However, physical size constraints limited the number of data points possible. 
 
+Error analysis was performed assuming a Poisson distribution for the number of counts,
+\begin{align}
+    \sigma &= \sqrt{N},
+\end{align}
+and an error of \qty{0.5}{\degree} in the angles. The accidental count rate was also corrected for using the relation,
+\begin{align}
+    asdasd
+\end{align}
+
+The data fit to a linear function with free slope and intercept. The fitted slope is \qty{224(39)}{counts/\second/polarizer}. The quantum Zeno effect-free case predicts a zero slope in this case, as increasing $n$ does not increase the number of transmitted photons. However, we see the violation of the null hypothesis by \qty{5.80}\sigma, a strong violation. Thus, we observe evidence of the quantum Zeno effect.
+
+\include{figs/countsvsn}
 
 \section{Conclusion}
 

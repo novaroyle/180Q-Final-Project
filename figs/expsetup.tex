@@ -4,8 +4,9 @@
   \draw[fill=#2, rotate=#3] (#1) ++(0,0.15) arc (90:-90:0.15);
 }
 
-\begin{figure*}
+\begin{figure}
     \centering
+    \begin{adjustbox}{width=\linewidth}
     \tikzset{
     polarizer/.style={draw, fill=orange!10, minimum width=1.5cm, minimum height=0.3cm},
     crystal/.style={draw, fill=teal!20, minimum width=0.4cm, minimum height=1.5cm},
@@ -19,26 +20,26 @@
     \begin{tikzpicture} 
     % beam path
     
-    \draw[beam, blue] (1.15,0) -- (4,0);
+    \draw[beam, blue] (4.15,0) -- (6,0);
 
-    \draw[beam] (4,0) -- (8,0.6);
+    \draw[beam] (6,0) -- (8,0.6);
     \draw[beam] (8,0.6) -- (8, -1.1);
     \draw[beam] (8,-1.1) -- (8, -1.7);
     \draw[beam] (8,-1.7) -- (8, -2.3);
     \draw[beam] (8,-2.3) -- (8, -2.9);
     \draw[beam] (8,-2.9) -- (8, -4);
 
-    \draw[beam] (4,0) -- (10,-0.9);
+    \draw[beam] (6,0) -- (10,-0.9);
     \draw[beam] (10,-0.9) -- (10,-4);
 
     % optical elements
-    \node[laser] (src)  at (0,0) {Laser};
+    \node[laser] (src)  at (3,0) {Laser};
     % \draw[fill=blue!15] (src.east) ++(0,0.15) arc (90:-90:0.15);
     \nib{src.east}{blue!15}{0}
     % \node[crystal, rotate=-20] (crys1) at (2, 0) {};
     % \node[anchor=south, inner sep=4pt] at (crys1.north) {YVO};
-    \node[crystal] (crys2) at (4, 0) {};
-    \node[anchor=south, inner sep=4pt] at (crys2.north) {Nonlinear down-conversion crystal};
+    \node[crystal] (crys2) at (6, 0) {};
+    \node[anchor=south, inner sep=10pt] at (crys2.north) {Nonlinear down-conversion crystal};
     % \node[crystal, rotate = -5] (crys3) at (6, 0) {};
     % \node[anchor=south, inner sep=4pt] at (crys3.north) {YVO};
 
@@ -54,17 +55,18 @@
     \node[coupler] (coupler1) at (10, -4) {};
     \nib{coupler1.north}{violet!80}{90}
 
-    \draw[thick, black] (0,-1.5) rectangle (4.7,-3.5);
-    \node[anchor=north west, inner sep=4pt] at (0,-1.5) {Photon counter};
+    \draw[thick, black] (3,-1.5) rectangle (6.7,-3.5);
+    \node[anchor=north west, inner sep=4pt] at (3,-1.5) {Photon counter};
 
-    \node[draw, fill=gray!20, circle, minimum size=0.2cm] at (3,-3) {};
-    \node[draw, fill=gray!20, circle, minimum size=0.2cm] at (4,-3) {};
-    \node at (3.5,-2.5) {Fiber inputs};
+    \node[draw, fill=gray!20, circle, minimum size=0.2cm] (c0) at (5,-3) {};
+    \node[draw, fill=gray!20, circle, minimum size=0.2cm] (c1) at (6,-3) {};
+    \node at (5.5,-2.5) {Fiber inputs};
 
-    \draw[fiber] (coupler0.south) to[bend left=60] (3,-3);
-    \draw[fiber] (coupler1.south) to[bend left=60] (4,-3);
+    \draw[fiber] (coupler0.south) to[bend left=60] (c0);
+    \draw[fiber] (coupler1.south) to[bend left=60] (c1);
 
     \end{tikzpicture}
+    \end{adjustbox}
 
     \caption{Experimental setup. The laser diode outputs \qty{405}{\nano\meter} horizontally-polarized light, which passes through a nonlinear down-conversion crystal (beta-barium borate, or BBO), which causes the incident photons to undergo spontaneous parametric down-conversion. This then generates pairs of horizontally-polarized \qty{810}{\nano\meter} photons, which then are separated into two arms. The photon in Arm 0 passes through 4 successive polarizers, whereas the photon in Arm 1 passes through free space. At the end of each arm, the photons are coupled into optical fibers and led into the input of a photon counter that detects coincident photons.}\label{fig:expsetup}
-\end{figure*}
+\end{figure}
