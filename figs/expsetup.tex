@@ -20,23 +20,25 @@
     \begin{tikzpicture} 
     % beam path
     
-    \draw[beam, blue] (4.15,0) -- (5,0);
+    \node (crys) at (6.1,0) {};
 
-    \draw[beam] (5,0) -- (8,0.6);
+    \draw[beam, blue] (5.15,0) -- (crys);
+
+    \draw[beam] (crys) -- (8,0.6);
     \draw[beam] (8,0.6) -- (8, -1.1);
     \draw[beam] (8,-1.1) -- (8, -1.7);
     \draw[beam] (8,-1.7) -- (8, -2.3);
     \draw[beam] (8,-2.3) -- (8, -2.9);
     \draw[beam] (8,-2.9) -- (8, -4);
 
-    \draw[beam] (5,0) -- (10,-0.9);
+    \draw[beam] (crys) -- (10,-0.9);
     \draw[beam] (10,-0.9) -- (10,-4);
 
     % optical elements
-    \node[laser] (src)  at (3,0) {Laser};
+    \node[laser] (src)  at (4,0) {Laser};
     \nib{src.east}{blue!15}{0}
 
-    \node[crystal] (crys2) at (5, 0) {};
+    \node[crystal] (crys2) at (crys) {};
     \node[anchor=north, inner sep=2pt] at (crys2.south) {BBO crystal};
 
     \node[mirror, rotate = 60] at (8,0.6) {};
