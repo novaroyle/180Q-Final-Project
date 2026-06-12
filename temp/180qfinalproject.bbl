@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{10}%
+\begin{thebibliography}{11}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -55,15 +55,18 @@
 \bibitem [{\citenamefont {Peres}(1980)}]{peresZenoParadoxQuantum1980}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Peres}},\ }\bibfield  {title} {\bibinfo {title} {Zeno paradox in quantum theory},\ }\href {https://doi.org/10.1119/1.12204} {\bibfield  {journal} {\bibinfo  {journal} {American Journal of Physics}\ }\textbf {\bibinfo {volume} {48}},\ \bibinfo {pages} {931} (\bibinfo {year} {1980})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kwiat}\ \emph {et~al.}(1995)\citenamefont {Kwiat}, \citenamefont {Weinfurter}, \citenamefont {Herzog}, \citenamefont {Zeilinger},\ and\ \citenamefont {Kasevich}}]{kwiatExperimentalRealizationInteractionfree1995}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Kwiat}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Weinfurter}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Herzog}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Zeilinger}},\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Kasevich}},\ }\bibfield  {title} {\bibinfo {title} {Experimental {{Realization}} of {{Interaction-free Measurements}}},\ }\href {https://doi.org/10.1111/j.1749-6632.1995.tb38981.x} {\bibfield  {journal} {\bibinfo  {journal} {Annals of the New York Academy of Sciences}\ }\textbf {\bibinfo {volume} {755}},\ \bibinfo {pages} {383} (\bibinfo {year} {1995})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kwiat}\ \emph {et~al.}(1996)\citenamefont {Kwiat}, \citenamefont {Weinfurter},\ and\ \citenamefont {Zeilinger}}]{kwiatQuantumSeeingDark1996}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Kwiat}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Weinfurter}},\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Zeilinger}},\ }\bibfield  {title} {\bibinfo {title} {Quantum {{Seeing}} in the {{Dark}}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Scientific American}\ }\textbf {\bibinfo {volume} {275}},\ \bibinfo {pages} {72} (\bibinfo {year} {1996})},\ \Eprint {https://arxiv.org/abs/24993449} {24993449} \BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Griffiths}\ and\ \citenamefont {Schroeter}(2018)}]{griffithsIntroductionQuantumMechanics2018}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~J.}\ \bibnamefont {Griffiths}}\ and\ \bibinfo {author} {\bibfnamefont {D.~F.}\ \bibnamefont {Schroeter}},\ }\href {https://doi.org/10.1017/9781316995433} {\emph {\bibinfo {title} {Introduction to Quantum Mechanics}}},\ \bibinfo {edition} {3rd}\ ed.\ (\bibinfo  {publisher} {Cambridge University Press},\ \bibinfo {address} {Cambridge},\ \bibinfo {year} {2018})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Hecht}(2017)}]{hechtOptics2017}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Hecht}},\ }\href@noop {} {\emph {\bibinfo {title} {Optics}}},\ \bibinfo {edition} {5th}\ ed.\ (\bibinfo  {publisher} {Pearson Education, Inc},\ \bibinfo {address} {Boston},\ \bibinfo {year} {2017})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Kwiat}\ \emph {et~al.}(1995)\citenamefont {Kwiat}, \citenamefont {Weinfurter}, \citenamefont {Herzog}, \citenamefont {Zeilinger},\ and\ \citenamefont {Kasevich}}]{kwiatExperimentalRealizationInteractionfree1995}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Kwiat}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Weinfurter}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Herzog}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Zeilinger}},\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Kasevich}},\ }\bibfield  {title} {\bibinfo {title} {Experimental {{Realization}} of {{Interaction-free Measurements}}},\ }\href {https://doi.org/10.1111/j.1749-6632.1995.tb38981.x} {\bibfield  {journal} {\bibinfo  {journal} {Annals of the New York Academy of Sciences}\ }\textbf {\bibinfo {volume} {755}},\ \bibinfo {pages} {383} (\bibinfo {year} {1995})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Kly{\v s}ko}\ and\ \citenamefont {Sviridov}(1988)}]{klyskoPhotonsNonlinearOptics1988}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~N.}\ \bibnamefont {Kly{\v s}ko}}\ and\ \bibinfo {author} {\bibfnamefont {{\^U}.~E.}\ \bibnamefont {Sviridov}},\ }\href@noop {} {\emph {\bibinfo {title} {Photons and Nonlinear Optics}}},\ \bibinfo {edition} {rev. and enlarged}\ ed.\ (\bibinfo  {publisher} {{Gordon and Breach}},\ \bibinfo {address} {New York London Paris [etc.]},\ \bibinfo {year} {1988})\BibitemShut {NoStop}%
