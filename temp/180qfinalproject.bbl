@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{12}%
+\begin{thebibliography}{13}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -67,6 +67,9 @@
 \bibitem [{\citenamefont {Hecht}(2017)}]{hechtOptics2017}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Hecht}},\ }\href@noop {} {\emph {\bibinfo {title} {Optics}}},\ \bibinfo {edition} {5th}\ ed.\ (\bibinfo  {publisher} {Pearson Education, Inc},\ \bibinfo {address} {Boston},\ \bibinfo {year} {2017})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Schuttevaar}(2024)}]{schuttevaarMalusLawDerived2024}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Schuttevaar}},\ }\bibfield  {title} {\bibinfo {title} {Malus' {{Law Derived}} from {{Deterministic Particle Behavior}}},\ }\href {https://doi.org/10.4236/jhepgc.2024.103058} {\bibfield  {journal} {\bibinfo  {journal} {Journal of High Energy Physics, Gravitation and Cosmology}\ }\textbf {\bibinfo {volume} {10}},\ \bibinfo {pages} {958} (\bibinfo {year} {2024})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Kly{\v s}ko}\ and\ \citenamefont {Sviridov}(1988)}]{klyskoPhotonsNonlinearOptics1988}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~N.}\ \bibnamefont {Kly{\v s}ko}}\ and\ \bibinfo {author} {\bibfnamefont {{\^U}.~E.}\ \bibnamefont {Sviridov}},\ }\href@noop {} {\emph {\bibinfo {title} {Photons and Nonlinear Optics}}},\ \bibinfo {edition} {rev. and enlarged}\ ed.\ (\bibinfo  {publisher} {{Gordon and Breach}},\ \bibinfo {address} {New York London Paris [etc.]},\ \bibinfo {year} {1988})\BibitemShut {NoStop}%
